@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ApperIcon from "./ApperIcon";
-
 const IconButton = ({
   iconName,
   size = "medium",
@@ -22,9 +21,9 @@ const IconButton = ({
     primary: "bg-blue-500 hover:bg-blue-600 text-white",
     secondary: "bg-gray-500 hover:bg-gray-600 text-white",
     ghost: "bg-transparent hover:bg-gray-100 text-gray-700"
-  };
+};
 
-const sizeclass = sizeClasses[size] || sizeClasses.medium;
+  const sizeclass = sizeClasses[size] || sizeClasses.medium;
   const colorclass = variantClasses[variant] || variantClasses.primary;
 
   if (!iconName) {
@@ -40,16 +39,16 @@ const sizeclass = sizeClasses[size] || sizeClasses.medium;
         {...props}
       />
     );
-  }
+}
 
-return (
+  return (
     <button
       onClick={onClick}
       disabled={disabled}
       className={`flex items-center justify-center transition-colors rounded ${sizeclass} ${colorclass} ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"} ${className}`}
       {...props}
     >
-      <ApperIcon name={iconName} className={sizeclass.split(' ')[0] + ' ' + sizeclass.split(' ')[1]} />
+      <ApperIcon name={iconName} className={sizeclass.replace(/text-\S+/, '')} />
     </button>
   );
 };
