@@ -1,21 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
-import Image from '@/components/atoms/Image'
-import Text from '@/components/atoms/Text'
-import IconButton from '@/components/atoms/IconButton'
-
+import Image from '../atoms/Image'
+import Text from '../atoms/Text'
+import IconButton from '../atoms/IconButton'
 const MediaObject = ({
   imageUrl,
   title,
   subtitle,
-  onClick,
-  onPlayPauseClick,
-  isPlaying,
-  isActive,
-  imageAlt,
-  showPlayPauseButton,
-  className
+  onClick = () => {},
+  onPlayPauseClick = () => {},
+  isPlaying = false,
+  isActive = false,
+  imageAlt = 'Media image',
+  showPlayPauseButton = true,
+  className = ''
 }) => {
   return (
     <motion.div
@@ -58,16 +57,6 @@ MediaObject.propTypes = {
   imageAlt: PropTypes.string,
   showPlayPauseButton: PropTypes.bool,
   className: PropTypes.string
-}
-
-MediaObject.defaultProps = {
-  onClick: () => {},
-  onPlayPauseClick: () => {},
-  isPlaying: false,
-  isActive: false,
-  imageAlt: 'Media image',
-  showPlayPauseButton: true,
-  className: ''
 }
 
 export default MediaObject
