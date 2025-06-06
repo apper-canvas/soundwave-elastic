@@ -1,0 +1,44 @@
+[
+  {
+    "id": "queue_1",
+    "track": {
+      "id": "track_1",
+      "title": "Midnight Dreams",
+      "artist": "Luna Echo",
+      "album": "Starlight Sessions",
+      "duration": 245,
+      "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300",
+      "audioUrl": "/audio/midnight-dreams.mp3"
+    },
+    "position": 1,
+    "addedAt": "2024-03-01T10:15:00Z"
+  },
+  {
+    "id": "queue_2",
+    "track": {
+      "id": "track_2",
+      "title": "Electric Pulse",
+      "artist": "Neon Waves",
+      "album": "Digital Horizons",
+      "duration": 198,
+      "coverUrl": "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=300",
+      "audioUrl": "/audio/electric-pulse.mp3"
+    },
+    "position": 2,
+    "addedAt": "2024-03-01T10:16:00Z"
+  },
+  {
+    "id": "queue_3",
+    "track": {
+      "id": "track_5",
+      "title": "Golden Hour",
+      "artist": "Sunset Boulevard",
+      "album": "Evening Glow",
+      "duration": 289,
+      "coverUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300",
+      "audioUrl": "/audio/golden-hour.mp3"
+    },
+    "position": 3,
+    "addedAt": "2024-03-01T10:17:00Z"
+  }
+]

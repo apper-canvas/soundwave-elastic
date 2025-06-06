@@ -1,0 +1,162 @@
+[
+  {
+    "id": "playlist_1",
+    "name": "Chill Vibes",
+    "tracks": [
+      {
+        "id": "track_1",
+        "title": "Midnight Dreams",
+        "artist": "Luna Echo",
+        "album": "Starlight Sessions",
+        "duration": 245,
+        "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300"
+      },
+      {
+        "id": "track_3",
+        "title": "Ocean Breeze",
+        "artist": "Coastal Vibes",
+        "album": "Summer Memories",
+        "duration": 267,
+        "coverUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300"
+      }
+    ],
+    "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300",
+    "createdAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "playlist_2",
+    "name": "Electronic Pulse",
+    "tracks": [
+      {
+        "id": "track_2",
+        "title": "Electric Pulse",
+        "artist": "Neon Waves",
+        "album": "Digital Horizons",
+        "duration": 198,
+        "coverUrl": "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=300"
+      },
+      {
+        "id": "track_9",
+        "title": "Neon Lights",
+        "artist": "Synthwave Collective",
+        "album": "Retro Future",
+        "duration": 278,
+        "coverUrl": "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=300"
+      }
+    ],
+    "coverUrl": "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=300",
+    "createdAt": "2024-01-20T14:45:00Z"
+  },
+  {
+    "id": "playlist_3",
+    "name": "Urban Soundtrack",
+    "tracks": [
+      {
+        "id": "track_4",
+        "title": "Urban Nights",
+        "artist": "City Lights",
+        "album": "Metropolitan",
+        "duration": 213,
+        "coverUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300"
+      }
+    ],
+    "coverUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300",
+    "createdAt": "2024-01-25T09:15:00Z"
+  },
+  {
+    "id": "playlist_4",
+    "name": "Nature Sounds",
+    "tracks": [
+      {
+        "id": "track_6",
+        "title": "Rhythm of Rain",
+        "artist": "Storm Chasers",
+        "album": "Weather Patterns",
+        "duration": 234,
+        "coverUrl": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300"
+      },
+      {
+        "id": "track_8",
+        "title": "Forest Whispers",
+        "artist": "Nature's Call",
+        "album": "Wilderness",
+        "duration": 256,
+        "coverUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300"
+      }
+    ],
+    "coverUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300",
+    "createdAt": "2024-02-01T16:20:00Z"
+  },
+  {
+    "id": "playlist_5",
+    "name": "Cosmic Journey",
+    "tracks": [
+      {
+        "id": "track_7",
+        "title": "Stellar Journey",
+        "artist": "Cosmic Drift",
+        "album": "Beyond the Stars",
+        "duration": 312,
+        "coverUrl": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=300"
+      }
+    ],
+    "coverUrl": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=300",
+    "createdAt": "2024-02-05T11:30:00Z"
+  },
+  {
+    "id": "playlist_6",
+    "name": "Summer Hits",
+    "tracks": [
+      {
+        "id": "track_5",
+        "title": "Golden Hour",
+        "artist": "Sunset Boulevard",
+        "album": "Evening Glow",
+        "duration": 289,
+        "coverUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300"
+      },
+      {
+        "id": "track_10",
+        "title": "Sunset Drive",
+        "artist": "Highway Dreams",
+        "album": "Road Trip",
+        "duration": 243,
+        "coverUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300"
+      }
+    ],
+    "coverUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300",
+    "createdAt": "2024-02-10T13:45:00Z"
+  },
+  {
+    "id": "playlist_7",
+    "name": "Ambient Flow",
+    "tracks": [
+      {
+        "id": "track_11",
+        "title": "Crystal Waters",
+        "artist": "Ambient Flow",
+        "album": "Liquid Sound",
+        "duration": 298,
+        "coverUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300"
+      }
+    ],
+    "coverUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300",
+    "createdAt": "2024-02-15T08:00:00Z"
+  },
+  {
+    "id": "playlist_8",
+    "name": "Digital Realm",
+    "tracks": [
+      {
+        "id": "track_12",
+        "title": "Digital Dreams",
+        "artist": "Pixel Perfect",
+        "album": "Virtual Reality",
+        "duration": 221,
+        "coverUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300"
+      }
+    ],
+    "coverUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300",
+    "createdAt": "2024-02-20T19:30:00Z"
+  }
+]
