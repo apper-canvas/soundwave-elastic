@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Card from '@/components/molecules/Card'
-import Text from '@/components/atoms/Text'
+import Card from '../molecules/Card'
+import Text from '../atoms/Text'
 
-const PlaylistGrid = ({ playlists, title, onPlaylistClick }) => {
+const PlaylistGrid = ({ playlists, title = '', onPlaylistClick = () => {} }) => {
   return (
     <div className="p-6">
       {title && <Text variant="h2" className="mb-6">{title}</Text>}
@@ -27,11 +27,6 @@ PlaylistGrid.propTypes = {
   playlists: PropTypes.array.isRequired,
   title: PropTypes.string,
   onPlaylistClick: PropTypes.func
-}
-
-PlaylistGrid.defaultProps = {
-  title: '',
-  onPlaylistClick: () => {}
 }
 
 export default PlaylistGrid
