@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ApperIcon from "../common/ApperIcon";
+import ApperIcon from "../ApperIcon/ApperIcon";
 
 const IconButton = ({
   iconName,
@@ -42,14 +42,14 @@ const IconButton = ({
     );
   }
 
-  return (
+return (
     <button
-      onClick={onClick}
+      onClick={onClick || (() => {})}
       disabled={disabled}
       className={`flex items-center justify-center transition-colors rounded ${sizeClass} ${colorClass} ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"} ${className}`}
       {...props}
     >
-      <ApperIcon name={iconName} className={sizeClass.replace(/text-\S+/, '')} />
+      <ApperIcon name={iconName} className={sizeClass.replace(/text-\S+/, '').trim()} />
     </button>
   );
 };
