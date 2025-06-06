@@ -1,6 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ApperIcon from "./ApperIcon";
+import ApperIcon from "../ApperIcon";
+const IconButton = ({
+  iconName,
+  size = "medium",
+  variant = "primary",
+import React from "react";
+import PropTypes from "prop-types";
+import ApperIcon from "../icons/ApperIcon";
 const IconButton = ({
   iconName,
   size = "medium",
