@@ -12,6 +12,21 @@ const IconButton = ({
   className = "",
   ...props 
 }) => {
+  // Normalize size to handle both string and numeric values
+  const normalizeSize = (sizeValue) => {
+    if (typeof sizeValue === 'string') {
+      return sizeValue;
+    }
+    if (typeof sizeValue === 'number') {
+      if (sizeValue < 16) return 'small';
+      if (sizeValue <= 24) return 'medium';
+      return 'large';
+    }
+    return 'medium'; // default fallback
+  };
+
+  const normalizedSize = normalizeSize(size);
+
   const sizeClasses = {
     small: "w-6 h-6 text-sm",
     medium: "w-8 h-8 text-base",
@@ -22,9 +37,9 @@ const IconButton = ({
     primary: "bg-blue-500 hover:bg-blue-600 text-white",
     secondary: "bg-gray-500 hover:bg-gray-600 text-white",
     ghost: "bg-transparent hover:bg-gray-100 text-gray-700"
-  };
+};
 
-  const sizeClass = sizeClasses[size] || sizeClasses.medium;
+  const sizeClass = sizeClasses[normalizedSize] || sizeClasses.medium;
   const colorClass = variantClasses[variant] || variantClasses.primary;
 
   if (!iconName) {
@@ -56,7 +71,10 @@ const IconButton = ({
 
 IconButton.propTypes = {
   iconName: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(["small", "medium", "large"]),
+  size: PropTypes.oneOfType([
+    PropTypes.oneOf(["small", "medium", "large"]),
+    PropTypes.number
+  ]),
   variant: PropTypes.oneOf(["primary", "secondary", "ghost"]),
   disabled: PropTypes.bool,
   asIcon: PropTypes.bool,
