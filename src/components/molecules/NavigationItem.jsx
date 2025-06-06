@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import IconButton from '@/components/atoms/IconButton'
-import Text from '@/components/atoms/Text'
+import IconButton from '../atoms/IconButton'
+import Text from '../atoms/Text'
 
 const NavigationItem = ({ iconName, label, onClick, isActive = false, isCollapsed = false }) => {
   const handleClick = (e) => {
@@ -21,9 +21,9 @@ const NavigationItem = ({ iconName, label, onClick, isActive = false, isCollapse
         isActive
           ? 'bg-surface-700 text-primary'
           : 'text-surface-300 hover:text-white hover:bg-surface-800'
-      }`}
+}`}
     >
-      <IconButton iconName={iconName} size={20} className="text-current hover:text-current" />
+      <IconButton iconName={iconName} size={20} className="text-current hover:text-current" asIcon={true} onClick={null} />
       {!isCollapsed && <Text variant="span" className="font-medium text-current">{label}</Text>}
     </button>
   )
