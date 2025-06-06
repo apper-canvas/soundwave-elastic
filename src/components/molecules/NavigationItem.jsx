@@ -3,10 +3,20 @@ import PropTypes from 'prop-types'
 import IconButton from '@/components/atoms/IconButton'
 import Text from '@/components/atoms/Text'
 
-const NavigationItem = ({ iconName, label, onClick, isActive, isCollapsed }) => {
+const NavigationItem = ({ iconName, label, onClick, isActive = false, isCollapsed = false }) => {
+  const handleClick = (e) => {
+    if (onClick && typeof onClick === 'function') {
+      onClick(e)
+    }
+  }
+
+  if (!iconName || !label) {
+    return null
+  }
+
   return (
     <button
-      onClick={onClick}
+      onClick={handleClick}
       className={`w-full flex items-center gap-3 p-3 rounded-lg transition-colors ${
         isActive
           ? 'bg-surface-700 text-primary'
@@ -25,11 +35,6 @@ NavigationItem.propTypes = {
   onClick: PropTypes.func.isRequired,
   isActive: PropTypes.bool,
   isCollapsed: PropTypes.bool
-}
-
-NavigationItem.defaultProps = {
-  isActive: false,
-  isCollapsed: false
 }
 
 export default NavigationItem
