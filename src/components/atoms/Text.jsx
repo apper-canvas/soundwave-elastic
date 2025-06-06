@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Text = ({ children, variant, className, ...props }) => {
+const Text = ({ children, variant = 'p', className = '', ...props }) => {
   const Tag = variant
 
   const baseClasses = 'text-white'
@@ -26,11 +26,6 @@ Text.propTypes = {
   children: PropTypes.node.isRequired,
   variant: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'p', 'span', 'small']),
   className: PropTypes.string
-}
-
-Text.defaultProps = {
-  variant: 'p',
-  className: ''
 }
 
 export default Text
