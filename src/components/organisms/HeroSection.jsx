@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Text from '@/components/atoms/Text'
+import Text from '../atoms/Text'
 
-const HeroSection = ({ title, subtitle, className }) => {
+const HeroSection = ({ title, subtitle, className = '' }) => {
   return (
     <div className={`relative h-80 bg-gradient-to-br from-primary/20 to-accent/20 flex items-end ${className}`}>
       <div className="absolute inset-0 bg-black/40"></div>
@@ -18,10 +18,6 @@ HeroSection.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   className: PropTypes.string
-}
-
-HeroSection.defaultProps = {
-  className: ''
 }
 
 export default HeroSection
