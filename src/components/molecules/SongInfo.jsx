@@ -1,10 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Image from '@/components/atoms/Image'
-import Text from '@/components/atoms/Text'
-import IconButton from '@/components/atoms/IconButton'
+import Image from '../atoms/Image'
+import Text from '../atoms/Text'
+import IconButton from '../atoms/IconButton'
 
-const SongInfo = ({ imageUrl, title, artist, onLikeClick, imageAlt }) => {
+const SongInfo = ({
+  imageUrl, 
+  title, 
+  artist, 
+  onLikeClick = () => {}, 
+  imageAlt = 'Track cover' 
+}) => {
   return (
     <div className="flex items-center gap-4 flex-1 min-w-0">
       <Image
@@ -27,11 +33,6 @@ SongInfo.propTypes = {
   artist: PropTypes.string.isRequired,
   onLikeClick: PropTypes.func,
   imageAlt: PropTypes.string
-}
-
-SongInfo.defaultProps = {
-  onLikeClick: () => {},
-  imageAlt: 'Track cover'
 }
 
 export default SongInfo
