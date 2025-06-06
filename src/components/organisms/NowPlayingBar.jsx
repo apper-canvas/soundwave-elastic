@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { motion, AnimatePresence } from 'framer-motion'
-import SongInfo from '@/components/molecules/SongInfo'
-import PlaybackControls from '@/components/molecules/PlaybackControls'
 import IconButton from '@/components/atoms/IconButton'
 import RangeSlider from '@/components/atoms/RangeSlider'
-
+import PlaybackControls from '@/components/molecules/PlaybackControls'
+import SongInfo from '@/components/molecules/SongInfo'
 const NowPlayingBar = ({
-  currentTrack,
+  currentTrack = null,
   isPlaying,
   progress,
   currentTime,
@@ -89,10 +88,6 @@ NowPlayingBar.propTypes = {
   onToggleMute: PropTypes.func.isRequired,
   onToggleQueue: PropTypes.func.isRequired,
   formatTime: PropTypes.func.isRequired
-}
-
-NowPlayingBar.defaultProps = {
-  currentTrack: null
 }
 
 export default NowPlayingBar
