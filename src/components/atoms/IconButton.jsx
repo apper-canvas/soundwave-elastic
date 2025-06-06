@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ApperIcon from "../ApperIcon/ApperIcon";
+import ApperIcon from "../ApperIcon";
 
 const IconButton = ({
   iconName,
@@ -39,10 +39,10 @@ const IconButton = ({
         className={`${sizeClass} ${colorClass} ${disabled ? "opacity-50" : ""} ${className}`}
         {...props}
       />
-    );
+);
   }
 
-return (
+  return (
     <button
       onClick={onClick || (() => {})}
       disabled={disabled}
