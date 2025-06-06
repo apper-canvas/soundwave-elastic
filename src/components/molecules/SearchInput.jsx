@@ -1,9 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Input from '@/components/atoms/Input'
-import ApperIcon from '@/components/ApperIcon'
+import Input from '../atoms/Input'
+import ApperIcon from '../ApperIcon'
 
-const SearchInput = ({ placeholder, value, onChange, className }) => {
+const SearchInput = ({ 
+  placeholder = 'Search...',
+  value = undefined, 
+  onChange = () => {}, 
+  className = '' 
+}) => {
   return (
     <div className="relative">
       <ApperIcon name="Search" size={20} className="absolute left-3 top-3 text-surface-400" />
@@ -23,13 +28,6 @@ SearchInput.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
   className: PropTypes.string
-}
-
-SearchInput.defaultProps = {
-  placeholder: 'Search...',
-  value: undefined,
-  onChange: () => {},
-  className: ''
 }
 
 export default SearchInput
