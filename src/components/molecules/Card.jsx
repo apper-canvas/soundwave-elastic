@@ -9,11 +9,11 @@ const Card = ({
   imageUrl,
   title,
   subtitle,
-  onClick,
-  onPlayClick,
-  imageAlt,
-  className,
-  showPlayButton
+  onClick = () => {},
+  onPlayClick = () => {},
+  imageAlt = 'Card image',
+  className = '',
+  showPlayButton = true
 }) => {
   return (
     <motion.div
@@ -54,14 +54,6 @@ Card.propTypes = {
   imageAlt: PropTypes.string,
   className: PropTypes.string,
   showPlayButton: PropTypes.bool
-}
-
-Card.defaultProps = {
-  onClick: () => {},
-  onPlayClick: () => {},
-  imageAlt: 'Card image',
-  className: '',
-  showPlayButton: true
 }
 
 export default Card
