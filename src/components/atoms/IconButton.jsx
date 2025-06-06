@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ApperIcon from "../ApperIcon";
+import ApperIcon from "./ApperIcon";
 
 const IconButton = ({
-  iconname,
+  iconName,
   size = "medium",
   variant = "primary",
   disabled = false,
@@ -24,33 +24,38 @@ const IconButton = ({
     ghost: "bg-transparent hover:bg-gray-100 text-gray-700"
   };
 
-  const sizeclass = sizeClasses[size] || sizeClasses.medium;
+const sizeclass = sizeClasses[size] || sizeClasses.medium;
   const colorclass = variantClasses[variant] || variantClasses.primary;
+
+  if (!iconName) {
+    console.warn('IconButton: iconName is required');
+    return null;
+  }
 
   if (asicon) {
     return (
       <ApperIcon
-        name={iconname}
+        name={iconName}
         className={`${sizeclass} ${colorclass} ${disabled ? "opacity-50" : ""} ${className}`}
         {...props}
       />
     );
   }
 
-  return (
+return (
     <button
       onClick={onClick}
       disabled={disabled}
       className={`flex items-center justify-center transition-colors rounded ${sizeclass} ${colorclass} ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"} ${className}`}
       {...props}
     >
-      <ApperIcon name={iconname} size={size} />
+      <ApperIcon name={iconName} className={sizeclass.split(' ')[0] + ' ' + sizeclass.split(' ')[1]} />
     </button>
   );
 };
 
 IconButton.propTypes = {
-  iconname: PropTypes.string.isRequired,
+  iconName: PropTypes.string.isRequired,
   size: PropTypes.oneOf(["small", "medium", "large"]),
   variant: PropTypes.oneOf(["primary", "secondary", "ghost"]),
   disabled: PropTypes.bool,
