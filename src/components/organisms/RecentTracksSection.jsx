@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import MediaObject from '@/components/molecules/MediaObject'
-import Text from '@/components/atoms/Text'
+import MediaObject from '../molecules/MediaObject'
+import Text from '../atoms/Text'
 
-const RecentTracksSection = ({ tracks, currentTrack, isPlaying, onTrackClick, title }) => {
+const RecentTracksSection = ({ tracks, currentTrack = null, isPlaying, onTrackClick, title = '' }) => {
   return (
     <div className="p-6">
       {title && <Text variant="h2" className="mb-6">{title}</Text>}
@@ -31,11 +31,6 @@ RecentTracksSection.propTypes = {
   isPlaying: PropTypes.bool.isRequired,
   onTrackClick: PropTypes.func.isRequired,
   title: PropTypes.string
-}
-
-RecentTracksSection.defaultProps = {
-  currentTrack: null,
-  title: ''
 }
 
 export default RecentTracksSection
